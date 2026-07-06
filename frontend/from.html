@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameXtreme - Ingreso</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a GameXtreme</h1>
+    </header>
+
+    <div>
+        <form onsubmit="event.preventDefault(); sessionStorage.setItem('nombreCliente', document.getElementById('nombreform').value.trim()); window.location.href='carrito.html';">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombreform" name="nombre" required>
+            
+            <div>
+                <button type="submit" class="ingresar">Ingresar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
