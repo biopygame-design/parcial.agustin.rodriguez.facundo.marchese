@@ -1,0 +1,29 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+<div id="contenedor-tabla">
+    <table id="tabla-productos">
+        <thead>
+            <tr class="fila-header-dashboard">
+                <th>ID</th>
+                <th>Nombre del Producto</th>
+                <th>Precio</th>
+                <th>Acciones</th> </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach(juego => { %>
+                <tr id="fila-<%= juego.id %>" class="fila-producto-dashboard">
+                    <td><%= juego.id %></td>
+                    <td><%= juego.nombre %></td>
+                    <td>$<%= juego.precio %></td>
+                    <td>
+                        <button class="btn-eliminar-prod" data-id="<%= juego.id %>">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+<script src="/js/delete.js"></script>
+<%- include("partials/footer.ejs") %> 
